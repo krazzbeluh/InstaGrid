@@ -125,7 +125,6 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="didTapPortraitButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="bnH-yr-DRx"/>
-                                    <action selector="didTapPortraitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CEV-d7-fbc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoO-vR-aXw">
@@ -150,7 +149,6 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="didTapUpsideDownButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="rXj-FN-yfm"/>
-                                    <action selector="didTapUpsideDownButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFJ-TF-md3"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq2-Ak-o0l">
