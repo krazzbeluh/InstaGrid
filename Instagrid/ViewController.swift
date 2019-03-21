@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    var currentImage: UIImage!
+    
     @IBOutlet weak var imagesView: ImagesView!
     
     override func viewDidLoad() {
@@ -17,7 +19,26 @@ class ViewController: UIViewController {
         changeDisposition(to: .portrait)
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    @objc func importPicture() {
+        let picker = UIImagePickerController()
+        picker.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.editedImage] as? UIImage else { return }
+        
+        dismiss(animated: true)
+        
+        currentImage = image
+    }
 
+    @IBAction func didTapButton1(_ sender: Any) {
+        importPicture()
+    }
+    
     @IBAction func didTapUpsideDownButton() {
         changeDisposition(to: .upsideDown)
     }

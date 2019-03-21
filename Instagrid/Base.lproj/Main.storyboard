@@ -45,6 +45,9 @@
                                             <constraint firstAttribute="width" secondItem="J4y-92-lv7" secondAttribute="height" multiplier="1:1" id="pJt-uv-h8F"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didTapButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jhj-ZB-ock"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03A-HY-95f">
                                         <rect key="frame" x="159" y="15" width="126" height="126"/>
@@ -115,38 +118,38 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUw-P8-vK9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUw-P8-vK9">
                                 <rect key="frame" x="147.5" y="547" width="80" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="bks-Z5-BZo"/>
                                     <constraint firstAttribute="width" secondItem="oUw-P8-vK9" secondAttribute="height" multiplier="1:1" id="tTh-4t-5cg"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="Layout 2"/>
                                 <connections>
                                     <action selector="didTapPortraitButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="bnH-yr-DRx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoO-vR-aXw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoO-vR-aXw">
                                 <rect key="frame" x="257.5" y="547" width="80" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uoO-vR-aXw" secondAttribute="height" multiplier="1:1" id="DRO-9g-PDi"/>
                                     <constraint firstAttribute="height" constant="80" id="yP3-yj-82u"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="Layout 3"/>
                                 <connections>
                                     <action selector="didTapFourButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lsb-C7-1Xx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cln-HY-FDF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cln-HY-FDF">
                                 <rect key="frame" x="37.5" y="547" width="80" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cln-HY-FDF" secondAttribute="height" multiplier="1:1" id="BqU-UM-gFB"/>
                                     <constraint firstAttribute="height" constant="80" id="cwO-oC-VdW"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="Layout 1"/>
                                 <connections>
                                     <action selector="didTapUpsideDownButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="rXj-FN-yfm"/>
                                 </connections>
@@ -209,4 +212,9 @@
             <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Layout 1" width="80" height="80"/>
+        <image name="Layout 2" width="80" height="80"/>
+        <image name="Layout 3" width="80" height="80"/>
+    </resources>
 </document>
