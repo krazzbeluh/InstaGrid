@@ -13,6 +13,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var currentImage: UIImage!
     
     @IBOutlet weak var imagesView: ImagesView!
+    @IBOutlet weak var dispositionButton1: UIButton!
+    @IBOutlet weak var dispositionButton2: UIButton!
+    @IBOutlet weak var dispositionButton3: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +53,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     func changeDisposition(to disposition: ImagesView.Disposition) {
         imagesView.disposition = disposition
+        switch disposition {
+        case .upsideDown:
+            dispositionButton1.setImage(#imageLiteral(resourceName: "Selected"), for: .normal)
+            dispositionButton2.setImage(nil, for: .normal)
+            dispositionButton3.setImage(nil, for: .normal)
+        case .portrait:
+            dispositionButton1.setImage(nil, for: .normal)
+            dispositionButton2.setImage(#imageLiteral(resourceName: "Selected"), for: .normal)
+            dispositionButton3.setImage(nil, for: .normal)
+        case .four:
+            dispositionButton1.setImage(nil, for: .normal)
+            dispositionButton2.setImage(nil, for: .normal)
+            dispositionButton3.setImage(#imageLiteral(resourceName: "Selected"), for: .normal)
+        }
     }
     
 }
