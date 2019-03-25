@@ -16,6 +16,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var dispositionButton1: UIButton!
     @IBOutlet weak var dispositionButton2: UIButton!
     @IBOutlet weak var dispositionButton3: UIButton!
+    @IBOutlet weak var swipeLabel: UILabel!
+    @IBOutlet weak var swipeImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +68,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             dispositionButton1.setImage(nil, for: .normal)
             dispositionButton2.setImage(nil, for: .normal)
             dispositionButton3.setImage(#imageLiteral(resourceName: "Selected"), for: .normal)
+        }
+    }
+    
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        switch UIDevice.current.orientation{
+        case .portrait:
+            swipeLabel.text = "Swipe up to share"
+            swipeImage.image = #imageLiteral(resourceName: "swipeUp")
+        default:
+            swipeLabel.text = "Swipe left to share"
+            swipeImage.image = #imageLiteral(resourceName: "swipeLeft")
         }
     }
     

@@ -300,6 +300,8 @@
                         <outlet property="dispositionButton2" destination="oUw-P8-vK9" id="aPt-7Y-xgj"/>
                         <outlet property="dispositionButton3" destination="uoO-vR-aXw" id="uOB-1f-7io"/>
                         <outlet property="imagesView" destination="bOF-jc-otb" id="Ia1-vh-z8U"/>
+                        <outlet property="swipeImage" destination="Zqj-j3-d7P" id="yL3-wx-Cth"/>
+                        <outlet property="swipeLabel" destination="dqH-vS-Hgq" id="qB4-ea-qDM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
