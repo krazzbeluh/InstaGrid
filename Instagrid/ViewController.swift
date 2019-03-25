@@ -22,6 +22,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         changeDisposition(to: .portrait)
+        currentImage = #imageLiteral(resourceName: "Selected")
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -38,9 +39,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismiss(animated: true)
         
         currentImage = image
+        imagesView.setImage(image)
     }
 
     @IBAction func didTapButton1(_ sender: Any) {
+        imagesView.selectedButton = .button1
+        importPicture()
+    }
+    @IBAction func didTapButton2(_ sender: Any) {
+        imagesView.selectedButton = .button2
+        importPicture()
+    }
+    @IBAction func didTapButton3(_ sender: Any) {
+        imagesView.selectedButton = .button3
+        importPicture()
+    }
+    @IBAction func didTapButton4(_ sender: Any) {
+        imagesView.selectedButton = .button4
+        importPicture()
+    }
+    @IBAction func didTapLargeButton1(_ sender: Any) {
+        imagesView.selectedButton = .largeButton1
+        importPicture()
+    }
+    @IBAction func didTapLargeButton2(_ sender: Any) {
+        imagesView.selectedButton = .largeButton2
         importPicture()
     }
     

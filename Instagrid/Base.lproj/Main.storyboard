@@ -29,52 +29,68 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOF-jc-otb" customClass="ImagesView" customModule="Instagrid" customModuleProvider="target">
                                 <rect key="frame" x="57" y="298" width="300" height="300"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZd-xS-RPp">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZd-xS-RPp">
                                         <rect key="frame" x="15" y="15" width="270" height="127"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="127" id="sMc-fg-mUW"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" image="addImage"/>
+                                        <connections>
+                                            <action selector="didTapLargeButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M2x-4a-HOo"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4y-92-lv7">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4y-92-lv7">
                                         <rect key="frame" x="15" y="15" width="126" height="126"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="126" id="LBS-C4-CAF"/>
                                             <constraint firstAttribute="width" secondItem="J4y-92-lv7" secondAttribute="height" multiplier="1:1" id="pJt-uv-h8F"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" image="addImage"/>
                                         <connections>
                                             <action selector="didTapButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jhj-ZB-ock"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03A-HY-95f">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03A-HY-95f">
                                         <rect key="frame" x="159" y="15" width="126" height="126"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="126" id="Czo-eX-DZW"/>
                                             <constraint firstAttribute="width" secondItem="03A-HY-95f" secondAttribute="height" multiplier="1:1" id="Kte-T5-EAJ"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" image="addImage"/>
+                                        <connections>
+                                            <action selector="didTapButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3o5-sg-kAf"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJg-qX-ork">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJg-qX-ork">
                                         <rect key="frame" x="15" y="157" width="270" height="127"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                        <state key="normal" image="addImage"/>
+                                        <connections>
+                                            <action selector="didTapLargeButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5KI-iz-6eI"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm5-6Q-yYS">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm5-6Q-yYS">
                                         <rect key="frame" x="159" y="157" width="126" height="126"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" image="addImage"/>
+                                        <connections>
+                                            <action selector="didTapButton4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7jQ-dy-Rfw"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufl-Xr-Guh">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufl-Xr-Guh">
                                         <rect key="frame" x="15" y="157" width="126" height="126"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="126" id="RGC-CN-V3l"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" image="addImage"/>
+                                        <connections>
+                                            <action selector="didTapButton3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NUe-rx-R4M"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.183504045" green="0.39541140200000002" blue="0.58041453359999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -85,7 +101,6 @@
                                     <constraint firstItem="Ufl-Xr-Guh" firstAttribute="trailing" secondItem="J4y-92-lv7" secondAttribute="trailing" id="5mx-Wh-8XV"/>
                                     <constraint firstItem="J4y-92-lv7" firstAttribute="top" secondItem="bOF-jc-otb" secondAttribute="top" constant="15" id="AiF-kl-0ZV"/>
                                     <constraint firstItem="J4y-92-lv7" firstAttribute="leading" secondItem="bOF-jc-otb" secondAttribute="leading" constant="15" id="D0Y-4i-hDI"/>
-                                    <constraint firstItem="jJg-qX-ork" firstAttribute="baseline" secondItem="gm5-6Q-yYS" secondAttribute="firstBaseline" id="DAO-dM-HKf"/>
                                     <constraint firstItem="jJg-qX-ork" firstAttribute="trailing" secondItem="aZd-xS-RPp" secondAttribute="trailing" id="IDq-eZ-M1k"/>
                                     <constraint firstItem="03A-HY-95f" firstAttribute="leading" secondItem="J4y-92-lv7" secondAttribute="trailing" constant="18" id="QwR-9u-J6N"/>
                                     <constraint firstAttribute="trailing" secondItem="03A-HY-95f" secondAttribute="trailing" constant="15" id="U6r-Y4-QNB"/>
@@ -94,7 +109,6 @@
                                     <constraint firstItem="aZd-xS-RPp" firstAttribute="leading" secondItem="J4y-92-lv7" secondAttribute="leading" id="YfJ-qy-jz0"/>
                                     <constraint firstAttribute="bottom" secondItem="gm5-6Q-yYS" secondAttribute="bottom" constant="17" id="ans-cn-glv"/>
                                     <constraint firstItem="aZd-xS-RPp" firstAttribute="top" secondItem="J4y-92-lv7" secondAttribute="top" id="dia-a4-tSk"/>
-                                    <constraint firstItem="jJg-qX-ork" firstAttribute="firstBaseline" secondItem="Ufl-Xr-Guh" secondAttribute="baseline" id="f6X-Ir-VnA"/>
                                     <constraint firstItem="jJg-qX-ork" firstAttribute="leading" secondItem="Ufl-Xr-Guh" secondAttribute="leading" id="i8l-ck-3Rd"/>
                                     <constraint firstItem="jJg-qX-ork" firstAttribute="trailing" secondItem="gm5-6Q-yYS" secondAttribute="trailing" id="kDR-gG-EYg"/>
                                     <constraint firstItem="aZd-xS-RPp" firstAttribute="trailing" secondItem="03A-HY-95f" secondAttribute="trailing" id="kM8-TF-zQv"/>
@@ -314,6 +328,7 @@
         <image name="Layout 2" width="80" height="80"/>
         <image name="Layout 3" width="80" height="80"/>
         <image name="Selected" width="80" height="80"/>
+        <image name="addImage" width="48" height="49"/>
         <image name="swipeUp" width="15" height="10"/>
     </resources>
 </document>

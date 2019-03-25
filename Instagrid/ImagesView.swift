@@ -14,6 +14,10 @@ class ImagesView: UIView {
         case portrait, upsideDown, four
     }
     
+    enum Buttons {
+        case button1, button2, button3, button4, largeButton1, largeButton2
+    }
+    
     @IBOutlet private var button1: UIButton!
     @IBOutlet private var button2: UIButton!
     @IBOutlet private var button3: UIButton!
@@ -24,6 +28,25 @@ class ImagesView: UIView {
     var disposition: Disposition = .portrait {
         didSet {
             setDisposition(disposition)
+        }
+    }
+    
+    var selectedButton: Buttons = .button1
+    
+    func setImage(_ image:UIImage) {
+        switch selectedButton {
+        case .button1:
+            button1.setImage(image, for: .normal)
+        case .button2:
+            button2.setImage(image, for: .normal)
+        case .button3:
+            button3.setImage(image, for: .normal)
+        case .button4:
+            button4.setImage(image, for: .normal)
+        case .largeButton1:
+            largeButton1.setImage(image, for: .normal)
+        case .largeButton2:
+            largeButton2.setImage(image, for: .normal)
         }
     }
     
