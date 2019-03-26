@@ -60,7 +60,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         var translationValue: CGFloat
         
         switch UIDevice.current.orientation{
-        case .portrait:
+        case .portrait, .faceUp, .faceDown:
             if translation.y > 0 {
                 translationValue = 0
             } else {
