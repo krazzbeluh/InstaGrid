@@ -18,12 +18,62 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var dispositionButton3: UIButton!
     @IBOutlet weak var swipeLabel: UILabel!
     @IBOutlet weak var swipeImage: UIImageView!
+    @IBOutlet weak var swipeView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         changeDisposition(to: .portrait)
         currentImage = #imageLiteral(resourceName: "Selected")
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(swipeImagesView(_:)))
+        imagesView.addGestureRecognizer(panGestureRecognizer)
+    }
+    
+    @objc func swipeImagesView(_ sender: UIPanGestureRecognizer) {
+            switch sender.state {
+            case .began, .changed:
+                transformImagesViewWith(gesture: sender)
+            case .ended, .cancelled:
+                let translationReset = CGAffineTransform(translationX: 0, y: 0)
+                imagesView.transform = translationReset
+                swipeView.isHidden = false
+                
+                print("Add here share options")
+            default:
+                break
+            }
+    }
+    
+    private func transformImagesViewWith(gesture: UIPanGestureRecognizer) {
+        let translation = gesture.translation(in: imagesView)
+        
+        let translationTransform: CGAffineTransform
+        var translationValue: CGFloat
+        
+        switch UIDevice.current.orientation{
+        case .portrait:
+            if translation.y > 0 {
+                translationValue = 0
+            } else {
+                translationValue = translation.y
+            }
+            translationTransform = CGAffineTransform(translationX: 0, y: translationValue)
+        default:
+            if translation.x > 0 {
+                translationValue = 0
+            } else {
+                translationValue = translation.x
+            }
+            translationTransform = CGAffineTransform(translationX: translationValue, y: 0)
+        }
+        
+        if translationValue < 0 {
+            swipeView.isHidden = true
+        } else {
+            swipeView.isHidden = false
+        }
+        
+        imagesView.transform = translationTransform
     }
     
     @objc func importPicture() {
