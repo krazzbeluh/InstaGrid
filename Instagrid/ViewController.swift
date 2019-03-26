@@ -39,7 +39,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 swipeView.isHidden = false
                 
                 // image to share
-                let image = #imageLiteral(resourceName: "Layout 2")
+                let image = imagesView.asImage()
                 
                 // set up activity view controller
                 let imageToShare = [ image ]

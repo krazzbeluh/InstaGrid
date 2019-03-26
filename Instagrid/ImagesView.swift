@@ -50,6 +50,13 @@ class ImagesView: UIView {
         }
     }
     
+    func asImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { rendererContext in
+            layer.render(in: rendererContext.cgContext)
+        }
+    }
+    
     private func setDisposition(_ disposition: Disposition) {
         switch disposition {
         case .portrait:
