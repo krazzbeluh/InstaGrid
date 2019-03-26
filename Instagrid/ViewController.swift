@@ -38,7 +38,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 imagesView.transform = translationReset
                 swipeView.isHidden = false
                 
-                print("Add here share options")
+                // image to share
+                let image = #imageLiteral(resourceName: "Layout 2")
+                
+                // set up activity view controller
+                let imageToShare = [ image ]
+                let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+                activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+                
+                // present the view controller
+                self.present(activityViewController, animated: true, completion: nil)
             default:
                 break
             }
