@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var currentImage: UIImage!
+    var currentBackgroundColor = 0
     let colors = [#colorLiteral(red: 0.06433343142, green: 0.4015628099, blue: 0.5964629054, alpha: 1), #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1), #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1), #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), #colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1), #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
     
     @IBOutlet weak var imagesView: ImagesView!
@@ -43,6 +44,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 case .portrait, .faceDown, .faceUp, .portraitUpsideDown:
                     if sender.translation(in: imagesView).y < 0 {
                         shareImage()
+                    } else if sender.translation(in: imagesView).x > 0 {
+                        switchColor(add: true)
+                    } else if sender.translation(in: imagesView).x < 0 {
+                        switchColor(add: false)
                     }
                 default:
                     if sender.translation(in: imagesView).x < 0 {
@@ -53,6 +58,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             default:
                 break
             }
+    }
+    
+    private func switchColor(add incrementColors: Bool) {
+        if incrementColors {
+            currentBackgroundColor += 1
+            if currentBackgroundColor >= colors.count {
+                currentBackgroundColor = 0
+            }
+            imagesView.backgroundColor = colors[currentBackgroundColor]
+        } else {
+            currentBackgroundColor -= 1
+            if currentBackgroundColor < 0 {
+                currentBackgroundColor = colors.count - 1
+            }
+            print(currentBackgroundColor)
+            imagesView.backgroundColor = colors[currentBackgroundColor]
+        }
     }
     
     private func shareImage() {
