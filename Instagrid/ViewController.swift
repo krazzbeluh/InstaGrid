@@ -42,16 +42,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 
                 switch UIDevice.current.orientation {
                 case .portrait, .faceDown, .faceUp, .portraitUpsideDown:
-                    if sender.translation(in: imagesView).y < 0 {
+                    if sender.translation(in: imagesView).y < -50 {
                         shareImage()
-                    } else if sender.translation(in: imagesView).x > 0 {
+                    } else if sender.translation(in: imagesView).x > 50 {
                         switchColor(add: true)
-                    } else if sender.translation(in: imagesView).x < 0 {
+                    } else if sender.translation(in: imagesView).x < -50 {
                         switchColor(add: false)
                     }
                 default:
-                    if sender.translation(in: imagesView).x < 0 {
+                    if sender.translation(in: imagesView).x < -50 {
                         shareImage()
+                    } else if sender.translation(in: imagesView).y > 50 {
+                        switchColor(add: false)
+                    } else if sender.translation(in: imagesView).y < -50 {
+                        switchColor(add: true)
                     }
                 }
                 
@@ -72,7 +76,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             if currentBackgroundColor < 0 {
                 currentBackgroundColor = colors.count - 1
             }
-            print(currentBackgroundColor)
             imagesView.backgroundColor = colors[currentBackgroundColor]
         }
     }
@@ -132,7 +135,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.editedImage] as? UIImage else { return }
         
-        dismiss(animated: true)
+        dismiss(animated: true, completion: nil)
         
         currentImage = image
         imagesView.setImage(image)
