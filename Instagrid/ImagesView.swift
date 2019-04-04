@@ -18,6 +18,7 @@ class ImagesView: UIView {
         case button1, button2, button3, button4, largeButton1, largeButton2
     }
     
+//    Connecting image buttons
     @IBOutlet private var button1: UIButton!
     @IBOutlet private var button2: UIButton!
     @IBOutlet private var button3: UIButton!
@@ -25,6 +26,7 @@ class ImagesView: UIView {
     @IBOutlet private var largeButton1: UIButton!
     @IBOutlet private var largeButton2: UIButton!
     
+//    When disposition is set, calling setDisposition()
     var disposition: Disposition = .portrait {
         didSet {
             setDisposition(disposition)
@@ -33,6 +35,7 @@ class ImagesView: UIView {
     
     var selectedButton: Buttons = .button1
     
+//    Set selected image to selectedButton
     func setImage(_ image:UIImage) {
         switch selectedButton {
         case .button1:
@@ -50,6 +53,7 @@ class ImagesView: UIView {
         }
     }
     
+//    transform imagesView to image
     func asImage() -> UIImage {
         let renderer = UIGraphicsImageRenderer(bounds: bounds)
         return renderer.image { rendererContext in
@@ -57,6 +61,7 @@ class ImagesView: UIView {
         }
     }
     
+//    set the disposition properties
     private func setDisposition(_ disposition: Disposition) {
         switch disposition {
         case .portrait:
