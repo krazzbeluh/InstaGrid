@@ -41,9 +41,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 transformImagesViewWith(gesture: sender)
             case .ended, .cancelled:
 //                resetting translation
-                let translationReset = CGAffineTransform(translationX: 0, y: 0)
-                imagesView.transform = translationReset
-                swipeView.isHidden = false
+                
+                let translationTransform = CGAffineTransform(translationX: 0, y: 0)
+                UIView.animate(withDuration: 0.5, animations: {
+                    self.imagesView.transform = translationTransform
+                }, completion: nil)
                 
                 switch UIDevice.current.orientation {
 //                    treating gestures with orientation
