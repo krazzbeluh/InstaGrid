@@ -40,15 +40,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //                transforming imagesView
                 transformImagesViewWith(gesture: sender)
             case .ended, .cancelled:
-//                resetting translation
-                
-                let translationTransform = CGAffineTransform(translationX: 0, y: 0)
-                UIView.animate(withDuration: 0.5, animations: {
-                    self.imagesView.transform = translationTransform
-                }, completion: { (finished: Bool) in
-                    self.swipeView.isHidden = false
-                })
-                
                 switch UIDevice.current.orientation {
 //                    treating gestures with orientation
                 case .portrait, .faceDown, .faceUp, .portraitUpsideDown:
@@ -103,7 +94,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
         
         // present the view controller
-        self.present(activityViewController, animated: true, completion: nil)
+        self.present(activityViewController, animated: true, completion: resetView)
+    }
+    
+    private func resetView() {
+        UIView.animate(withDuration: 0.5, animations: {
+            let translationTransform = CGAffineTransform(translationX: 0, y: 0)
+            self.imagesView.transform = translationTransform
+        }, completion: { (finished: Bool) in
+            self.swipeView.isHidden = false
+        })
     }
     
 //    this function transforms imagesView with gesture
