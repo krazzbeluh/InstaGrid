@@ -61,9 +61,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     }
                 }
                 
+                if sender.translation(in: imagesView).x >= -50 {
+                    resetView()
+                }
+                
             default:
                 break
             }
+        
     }
     
 //    this function increments or decrements currentBackgroundColor
@@ -92,9 +97,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let imageToShare = [ image ]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        activityViewController.completionWithItemsHandler = { (type,completed,items,error) in self.resetView() }
         
         // present the view controller
-        self.present(activityViewController, animated: true, completion: resetView)
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
     private func resetView() {
