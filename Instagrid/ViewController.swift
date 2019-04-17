@@ -61,6 +61,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     }
                 }
                 
+//                resetting view after swipe
                 if sender.translation(in: imagesView).x >= -50 {
                     resetView()
                 }
