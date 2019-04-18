@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="landscape">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,14 +23,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOF-jc-otb" customClass="ImagesView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="218" y="99" width="300" height="300"/>
+                                <rect key="frame" x="72" y="233" width="270" height="270"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZd-xS-RPp">
-                                        <rect key="frame" x="15" y="15" width="270" height="127"/>
+                                        <rect key="frame" x="15" y="15" width="240" height="112"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="127" id="sMc-fg-mUW">
@@ -39,11 +39,11 @@
                                         </constraints>
                                         <state key="normal" image="addImage"/>
                                         <connections>
-                                            <action selector="didTapLargeButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M2x-4a-HOo"/>
+                                            <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FuM-3d-O56"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4y-92-lv7">
-                                        <rect key="frame" x="15" y="15" width="126" height="126"/>
+                                        <rect key="frame" x="15" y="15" width="112" height="112"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="126" id="LBS-C4-CAF">
@@ -53,11 +53,11 @@
                                         </constraints>
                                         <state key="normal" image="addImage"/>
                                         <connections>
-                                            <action selector="didTapButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jhj-ZB-ock"/>
+                                            <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l4J-ZW-8nl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="03A-HY-95f">
-                                        <rect key="frame" x="159" y="15" width="126" height="126"/>
+                                        <rect key="frame" x="143" y="15" width="112" height="112"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="126" id="Czo-eX-DZW">
@@ -67,28 +67,28 @@
                                         </constraints>
                                         <state key="normal" image="addImage"/>
                                         <connections>
-                                            <action selector="didTapButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3o5-sg-kAf"/>
+                                            <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgY-Vu-EoC"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJg-qX-ork">
-                                        <rect key="frame" x="15" y="157" width="270" height="127"/>
+                                        <rect key="frame" x="15" y="142" width="240" height="113"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                         <state key="normal" image="addImage"/>
                                         <connections>
-                                            <action selector="didTapLargeButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5KI-iz-6eI"/>
+                                            <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PUE-su-wbo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm5-6Q-yYS">
-                                        <rect key="frame" x="159" y="157" width="126" height="126"/>
+                                        <rect key="frame" x="143" y="142" width="112" height="113"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="addImage"/>
                                         <connections>
-                                            <action selector="didTapButton4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7jQ-dy-Rfw"/>
+                                            <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yab-Yo-xgU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufl-Xr-Guh">
-                                        <rect key="frame" x="15" y="157" width="126" height="126"/>
+                                        <rect key="frame" x="15" y="142" width="112" height="112"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="126" id="RGC-CN-V3l">
@@ -97,7 +97,7 @@
                                         </constraints>
                                         <state key="normal" image="addImage"/>
                                         <connections>
-                                            <action selector="didTapButton3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NUe-rx-R4M"/>
+                                            <action selector="didTapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f60-hA-YJg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -154,13 +154,13 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9p-y7-xkh">
-                                <rect key="frame" x="16" y="0.0" width="704" height="39"/>
+                                <rect key="frame" x="16" y="20" width="382" height="39"/>
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUw-P8-vK9">
-                                <rect key="frame" x="636" y="209" width="80" height="80"/>
+                                <rect key="frame" x="167" y="616" width="80" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="bks-Z5-BZo"/>
@@ -172,7 +172,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uoO-vR-aXw">
-                                <rect key="frame" x="636" y="319" width="80" height="80"/>
+                                <rect key="frame" x="262" y="616" width="80" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uoO-vR-aXw" secondAttribute="height" multiplier="1:1" id="DRO-9g-PDi"/>
@@ -184,17 +184,17 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq2-Ak-o0l">
-                                <rect key="frame" x="0.0" y="0.0" width="218" height="414"/>
+                                <rect key="frame" x="0.0" y="59" width="414" height="174"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="swipeUp" translatesAutoresizingMaskIntoConstraints="NO" id="Zqj-j3-d7P">
-                                        <rect key="frame" x="101.33333333333333" y="194.33333333333334" width="15.333333333333329" height="25.333333333333343"/>
+                                        <rect key="frame" x="199.33333333333334" y="99" width="15.333333333333343" height="25.666666666666671"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Zqj-j3-d7P" secondAttribute="height" multiplier="3:5" id="CsN-4m-Rmj"/>
                                             <constraint firstAttribute="height" constant="25.5" id="rka-1y-nld"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqH-vS-Hgq">
-                                        <rect key="frame" x="0.0" y="219.66666666666666" width="218" height="29"/>
+                                        <rect key="frame" x="0.0" y="124.66666666666666" width="414" height="29"/>
                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -228,7 +228,7 @@
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cln-HY-FDF">
-                                <rect key="frame" x="636" y="99" width="80" height="80"/>
+                                <rect key="frame" x="72" y="616" width="80" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cln-HY-FDF" secondAttribute="height" multiplier="1:1" id="BqU-UM-gFB"/>

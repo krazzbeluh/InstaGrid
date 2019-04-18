@@ -131,6 +131,14 @@
 		94323462223FD9FE007CDED1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+				);
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Paul Leclerc";

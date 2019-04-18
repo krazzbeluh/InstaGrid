@@ -165,7 +165,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
 //    importing images in the tapped button
-    @IBAction func didTapButton1(_ sender: Any) {
+    
+    @IBAction func didTapButton(_ sender: UIButton) {
+        imagesView.selectedButton = sender
+        importPicture()
+    }
+    /*@IBAction func didTapButton1(_ sender: Any) {
         imagesView.selectedButton = .button1
         importPicture()
     }
@@ -189,6 +194,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagesView.selectedButton = .largeButton2
         importPicture()
     }
+ */
     
 //    changing disposition with buttons
     @IBAction func didTapUpsideDownButton() {
