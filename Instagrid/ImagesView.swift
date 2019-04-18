@@ -66,7 +66,7 @@ class ImagesView: UIView {
             largeButton2.contentVerticalAlignment = .fill
             largeButton2.imageView?.contentMode = .scaleAspectFill
         default:
-            print("Do Nothing")
+            break
         }
     }
     
