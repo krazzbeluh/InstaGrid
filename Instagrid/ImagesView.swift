@@ -31,6 +31,8 @@ class ImagesView: UIView {
         }
     }
     
+    var hiddenBySwipe = false
+    
 //    Set selected image to selectedButton
     func setImage(_ image:UIImage) {
         switch selectedButton {

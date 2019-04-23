@@ -114,6 +114,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }, completion: { (finished: Bool) in
             self.swipeView.isHidden = false
         })
+        imagesView.hiddenBySwipe = false
+    }
+    
+    private func hideView() {
+        let screenHeight = UIScreen.main.bounds.height
+        UIView.animate(withDuration: 0.5, animations: {
+            let translationTransform = CGAffineTransform(translationX: 0, y: -screenHeight)
+            self.imagesView.transform = translationTransform
+        }, completion: { (finished: Bool) in
+            self.swipeView.isHidden = true
+        })
+        imagesView.hiddenBySwipe = true
     }
     
 //    this function transforms imagesView with gesture
@@ -141,13 +153,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
 //        hidding swipeView if translation is started
-        if translationValue < 0 {
-            swipeView.isHidden = true
-        } else {
-            swipeView.isHidden = false
-        }
+//        if translationValue < 0 {
+//            swipeView.isHidden = true
+//        }
         
-        imagesView.transform = translationTransform
+        if imagesView.hiddenBySwipe == false {
+            imagesView.transform = translationTransform
+            if translationValue > -50 {
+                hideView()
+            }
+        }
     }
     
 //    this function starts the picture importation with UIImagePickerController
