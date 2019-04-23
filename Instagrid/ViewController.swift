@@ -48,22 +48,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //                        changing colors
                     } else if sender.translation(in: imagesView).x > 50 {
                         switchColor(add: true)
+                        resetView()
                     } else if sender.translation(in: imagesView).x < -50 {
                         switchColor(add: false)
+                        resetView()
+                    } else {
+                        resetView()
                     }
                 default:
                     if sender.translation(in: imagesView).x < -50 {
                         shareImage()
                     } else if sender.translation(in: imagesView).y > 50 {
                         switchColor(add: false)
+                        resetView()
                     } else if sender.translation(in: imagesView).y < -50 {
                         switchColor(add: true)
+                        resetView()
+                    } else {
+                        resetView()
                     }
-                }
-                
-//                resetting view after swipe
-                if sender.translation(in: imagesView).x >= -50 {
-                    resetView()
                 }
                 
             default:
