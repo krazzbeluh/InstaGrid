@@ -152,11 +152,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             translationTransform = CGAffineTransform(translationX: translationValue, y: 0)
         }
         
-//        hidding swipeView if translation is started
-//        if translationValue < 0 {
-//            swipeView.isHidden = true
-//        }
-        
         if imagesView.hiddenBySwipe == false {
             imagesView.transform = translationTransform
             if translationValue > -50 {
@@ -188,31 +183,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagesView.selectedButton = sender
         importPicture()
     }
-    /*@IBAction func didTapButton1(_ sender: Any) {
-        imagesView.selectedButton = .button1
-        importPicture()
-    }
-    @IBAction func didTapButton2(_ sender: Any) {
-        imagesView.selectedButton = .button2
-        importPicture()
-    }
-    @IBAction func didTapButton3(_ sender: Any) {
-        imagesView.selectedButton = .button3
-        importPicture()
-    }
-    @IBAction func didTapButton4(_ sender: Any) {
-        imagesView.selectedButton = .button4
-        importPicture()
-    }
-    @IBAction func didTapLargeButton1(_ sender: Any) {
-        imagesView.selectedButton = .largeButton1
-        importPicture()
-    }
-    @IBAction func didTapLargeButton2(_ sender: Any) {
-        imagesView.selectedButton = .largeButton2
-        importPicture()
-    }
- */
     
 //    changing disposition with buttons
     @IBAction func didTapUpsideDownButton() {
