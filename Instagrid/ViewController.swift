@@ -120,13 +120,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     private func hideView() {
+        swipeView.isHidden = true
         let screenHeight = UIScreen.main.bounds.height
         UIView.animate(withDuration: 0.5, animations: {
             let translationTransform = CGAffineTransform(translationX: 0, y: -screenHeight)
             self.imagesView.transform = translationTransform
-        }, completion: { (finished: Bool) in
-            self.swipeView.isHidden = true
-        })
+        }, completion: nil)
         imagesView.hiddenBySwipe = true
     }
     
