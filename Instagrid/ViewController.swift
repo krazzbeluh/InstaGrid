@@ -44,6 +44,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 //                    treating gestures with orientation
                 case .portrait, .faceDown, .faceUp, .portraitUpsideDown:
                     if sender.translation(in: imagesView).y < -50 {
+                        hideView()
                         shareImage()
 //                        changing colors
                     } else if sender.translation(in: imagesView).x > 50 {
@@ -57,6 +58,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     }
                 default:
                     if sender.translation(in: imagesView).x < -50 {
+                        hideView()
                         shareImage()
                     } else if sender.translation(in: imagesView).y > 50 {
                         switchColor(add: false)
@@ -154,9 +156,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         if imagesView.hiddenBySwipe == false {
             imagesView.transform = translationTransform
-            if translationValue > -50 {
-                hideView()
-            }
         }
     }
     
